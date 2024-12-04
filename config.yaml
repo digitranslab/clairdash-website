@@ -1,0 +1,54 @@
+baseURL: "https://clairdash.com/"
+enableRobotsTXT: false
+languageCode: "en-uk"
+title: "Clairdash | Build internal tools in minutes, the easy way"
+enableEmoji: "true"
+disableKinds: ["taxonomy", "categories"]
+ignoreErrors: ["error-disable-taxonomy"]
+copyright: "This work is licensed and owned by Clairdash"
+
+
+menus:
+  main:
+  - name: ITIL processes
+    url: /resources/itil-processes/
+    weight: 1
+    identifier: itilProcesses
+  - name: Asset management
+    url: /resources/itil-processes/asset-management/
+    weight: 2
+    identifier: assetManagement
+
+markup:
+  goldmark:
+    rendered:  
+      hardWraps: "true"
+  tableOfContents:
+    endLevel: 2
+    ordered: false
+    startLevel: 2
+  highlight:
+    style: dracula
+    guessSyntax: true
+    tabwidth: 12
+
+paginate: 8
+
+params:
+  keywords: ["Low code platform", "Custom software", "Web application builder", "internal tools", "internal tool builder"]
+  description: "Clairdash is a modern, open source low-code platform for building modern internal applications in minutes."
+  dateform: "Jan 2, 2006"
+  lang: "en"
+  images: ['homepage-meta.png']
+
+params.publisher:
+  name: "Clairdash"
+
+params.publisher.logo:
+  url: "/clairdash-logo.png"
+
+params.logo:
+  url: "/clairdash-logo.png"
+
+imaging:
+  quality: 100

@@ -1,0 +1,46 @@
+{{ partial "head/header.html" . }}
+{{ partial "navigation.html" . }}
+<main id="content" role="main">
+  <!-- Article Content -->
+  <article class="bg-base-1">
+    <div class="article space-1">
+      <div class="container-8 mx-auto">
+        <a class="opacity-75 font-weight-medium a-alt" href="/blog/"><- All posts</a>
+            <header class="mb-2 mt-6">
+              <h1 class="hero-title mt-2 mb-4">{{ .Title }}</h1>
+              <div class="flex-row align-center border-y py-1">
+                <div>
+                  {{ if (.Params.profilePic) }}
+                  <img class="u-avatar-5 rounded-circle mr-2" src="{{ with .Params.profilePic }}{{ . }}{{ end }}">
+                  {{ else }}
+                  <img class="u-avatar-5 rounded-circle mr-2" src="/img/team/moh.webp">
+                  {{ end }}
+                </div>
+                <div class="flex-column">
+                  <div>
+                    {{ .Params.author }}
+                  </div>
+                  <div>
+                    <span class="opacity-50 text-xs">{{ .ReadingTime }} min read</span>
+                    <span>
+                      ·
+                    </span>
+                    <span class="opacity-50 text-xs">{{ .Date.Format .Site.Params.dateform }}</span>
+                  </div>
+                </div>
+              </div>
+
+            </header>
+            <div class="mx-md-auto mt-6 mb-9">
+              {{ .Content }}
+            </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </article>
+</main>
+<!--Article-->
+{{ partial "cta.html" . }}
+{{ partial "footer.html" . }}

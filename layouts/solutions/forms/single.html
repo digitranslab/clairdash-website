@@ -1,0 +1,21 @@
+{{ partial "head/header.html" . }} 
+{{ partial "navigation.html" . }}
+{{ partial "forms/hero.html" . }} 
+{{ partial "forms/features.html" . }} 
+{{ partial "forms/benefits.html" . }}
+{{ partial "forms/security.html" . }}
+{{ partial "forms/templates.html" . }}
+{{ partial "forms/vs.html" . }}
+{{ partial "forms/pricing.html" . }}
+{{ partial "forms/faqs.html" . }}
+{{ partial "forms/guides.html" . }}
+{{ partial "cta.html" . }}
+{{ partial "footer.html" . }}
+
+<script src="{{ "js/forms-tabs.js" | absURL }}"></script>
+<script src="{{ "js/tooltip.js" | absURL }}"></script>
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+<script>
+    document.getElementById("defaultOpen").click();
+</script>

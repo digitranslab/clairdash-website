@@ -1,0 +1,296 @@
+[build]
+publish = "public"
+command = "hugo --gc --minify"
+
+[context.production.environment]
+HUGO_VERSION = "0.115.1"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+command = "cd build && npm install && node hugo.js generate -f && cd .. && hugo --gc --minify --enableGitInfo"
+
+[context.split1.environment]
+HUGO_VERSION = "0.115.1"
+HUGO_ENV = "production"
+
+[context.deploy-preview]
+command = "cd build && npm install && node hugo.js generate -f && cd .. && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.115.1"
+
+[context.branch-deploy]
+command = "cd build && npm install && node hugo.js generate -f && cd .. && hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.115.1"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
+
+[context.website-refresh-23]
+command = "cd build && npm install && node hugo.js generate -f && cd .. && hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[[redirects]]
+  from = "/host-a-web-app"
+  to = "/product/" 
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/manage-a-web-app"
+  to = "/product/" 
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/build-a-web-app"
+  to = "/product/" 
+  status = 301
+  force = true
+
+
+[[redirects]]
+  from = "/blog/posts/cofoundervalidation/"
+  to = "/blog/cofoundervalidation/" 
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/investment"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/blog/november-2021-release"
+  to = "/blog/updates/november-2021-release"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/clairdash-public-beta"
+  to = "/blog/updates/clairdash-public-beta"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/clairdash-s-public-api-is-now-publicly-available"
+  to = "/blog/updates/clairdash-s-public-api-is-now-publicly-available"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/building-a-crud-app-with-clairdash-and-next.js"
+  to = "/blog/data/building-a-crud-app-with-clairdash-and-next.js"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/public-forms-how-to-build-them-in-minutes"
+  to = "/blog/app-building/public-forms-how-to-build-them-in-minutes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/people"
+  to = "/careers"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/self-host"
+  to = "/pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/integration"
+  to = "/integrations"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/integration/*"
+  to = "/integrations"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/integrations/database/*"
+  to = "/integrations/database"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/integrations/api/*"
+  to = "/integrations/api"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/integrations/auth/*"
+  to = "/integrations/auth"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/integrations/infra/*"
+  to = "/integrations/infra"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/integrationcategories/*"
+  to = "/integrations/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/design/"
+  to = "/product"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/deploy/"
+  to = "/product"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/automate/"
+  to = "/product"
+  status = 301
+  force = true
+
+
+[[redirects]]
+  from = "/build/"
+  to = "/product"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/data/"
+  to = "/product"
+  status = 301
+  force = true
+
+  [[redirects]]
+  from = "/deploy"
+  to = "/product"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/automate/"
+  to = "/product"
+  status = 301
+  force = true
+
+
+[[redirects]]
+  from = "/build"
+  to = "/product"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/data"
+  to = "/product"
+  status = 301
+  force = true
+
+
+[[redirects]]
+  from = "/design"
+  to = "/product"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tags/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/categories/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/5-good-habits-for-success/"
+  to = "/blog/updates/5-good-habits-for-success/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/may-2021-release/"
+  to = "/blog/updates/may-2021-release/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/github-stars/"
+  to = "/blog/updates/github-stars/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/progressive-web-app-play-store/"
+  to = "/blog/updates/progressive-web-app-play-store/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/web-application-development/FAQ"
+  to = "/blog/updates/web-application-development/FAQ"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/5-good-habits-for-success"
+  to = "/blog/updates/5-good-habits-for-success"
+  status = 301
+  force = true
+
+
+[[redirects]]
+  from = "/b"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/b/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/c"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/c/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/licensing/"
+  to = "/terms-of-service/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/components/"
+  to = "/product/"
+  status = 301
+  force = true
+

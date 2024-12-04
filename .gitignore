@@ -1,0 +1,32 @@
+# Hugo default output directory
+/public
+/resources
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store
+*.iml
+
+.env
+
+#generated on build
+# no longer dynamic (temporary)
+
+# data/Component
+# data/Integration
+
+
+# Hugo default output directory
+build/example/public
+# Hugo generated resources directory
+build/example/resources
+
+build/node_modules/*
+build/.DS_Store
+build/.env
